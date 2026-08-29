@@ -1,0 +1,16 @@
+# Copy to terraform.tfvars and adjust. terraform.tfvars is gitignored.
+
+prefix      = "az3t"
+environment = "prod"
+location    = "eastus"
+
+# Paste the contents of your id_rsa.pub / id_ed25519.pub here. Leave blank
+# to have Terraform generate a keypair for you (private key written to
+# ./generated_vmss_ssh_key.pem and gitignored).
+admin_ssh_public_key = ""
+
+tags = {
+  project   = "3-tier-azure"
+  managedBy = "terraform"
+  owner     = "your-name"
+}
